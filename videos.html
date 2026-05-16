@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>CyberShield - Videos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit() {
+
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            includedLanguages: 'hi,zh-CN,fr,es',
+            autoDisplay: false
+        },
+        'google_translate_element'
+    );
+}
+
+function changeLanguage(lang) {
+
+    if (lang === "en") {
+        document.cookie = "googtrans=/en/en;path=/";
+        location.reload();
+        return;
+    }
+
+    const interval = setInterval(() => {
+
+        const select = document.querySelector(".goog-te-combo");
+
+        if (select) {
+
+            select.value = lang;
+            select.dispatchEvent(new Event("change"));
+
+            clearInterval(interval);
+        }
+
+    }, 500);
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<header>
+    <h1>CyberShield</h1>
+    <p>Learn Through Videos</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="frauds.html">Fraud Types</a>
+    <a href="awareness.html">Awareness Tips</a>
+    <a href="report.html">Report Fraud</a>
+    <a href="videos.html">Videos</a>
+
+<select id="custom-language" onchange="changeLanguage(this.value)">
+    <option value="en">English</option>
+    <option value="hi">Hindi</option>
+    <option value="zh-CN">Chinese</option>
+    <option value="fr">French</option>
+    <option value="es">Spanish</option>
+</select>
+
+<div id="google_translate_element" style="display:none;"></div></nav>
+
+<section>
+    <h2>Cyber Fraud Awareness Videos</h2>
+   
+    <p>
+    Watch these videos to understand real-life cyber fraud cases and how to stay safe online.
+</p>
+
+    <div class="card">
+        <h3>Phishing Scam</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XsOWczwRVuc?si=5EtHWF-vIdSrrCTn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Learn how phishing scams work and how to avoid them.</p>
+    </div>
+
+    <div class="card">
+        <h3>UPI Fraud</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFkAkN5T8_0?si=_eiLTAqRhelmaW0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Understand common UPI scams and safety tips.</p>
+    </div>
+
+    <div class="card">
+        <h3>OTP Fraud</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_egONPXLCxg?si=iEIgQ2AkN_FsfA0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Understand common UPI scams and safety tips.</p>
+    </div>
+
+    <div class="card">
+        <h3>Fraud Scam</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/W_PPMu8IGPY?si=7vJJBhkPiTCBZNAm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Understand common UPI scams and safety tips.</p>
+    </div>
+
+</section>
+
+</body>
+</html>

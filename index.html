@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CyberShield</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- <div id="google_translate_element"></div> -->
+
+<script>
+function googleTranslateElementInit() {
+
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            includedLanguages: 'hi,zh-CN,fr,es',
+            autoDisplay: false
+        },
+        'google_translate_element'
+    );
+}
+
+function changeLanguage(lang) {
+
+    if (lang === "en") {
+        document.cookie = "googtrans=/en/en;path=/";
+        location.reload();
+        return;
+    }
+
+    const interval = setInterval(() => {
+
+        const select = document.querySelector(".goog-te-combo");
+
+        if (select) {
+
+            select.value = lang;
+            select.dispatchEvent(new Event("change"));
+
+            clearInterval(interval);
+        }
+
+    }, 500);
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<nav> 
+    <a href="index.html">Home</a> 
+    <a href="frauds.html">Fraud Types</a> 
+    <a href="awareness.html">Awareness Tips</a> 
+    <a href="report.html">Report Fraud</a> 
+    <a href="videos.html">Videos</a> 
+    
+<select id="custom-language" onchange="changeLanguage(this.value)">
+    <option value="en">English</option>
+    <option value="hi">Hindi</option>
+    <option value="zh-CN">Chinese</option>
+    <option value="fr">French</option>
+    <option value="es">Spanish</option>
+</select>
+
+<div id="google_translate_element" style="display:none;"></div></nav> 
+
+    <hr> 
+
+    <h1>CyberShield</h1> 
+    
+    <p> 
+        Your Safety Against Cyber Frauds. 
+    </p> 
+
+    <hr> 
+    
+    <section> 
+        <h2>Welcome to CyberShield</h2> 
+        <p> 
+            CyberShield is a platform designed to spread awareness about cyber frauds. With the increasing use of digital platforms, online scams are becoming more common. Our goal is to educate users and help them stay safe. 
+        </p> 
+    </section> 
+    
+    <div class="cards"> 
+
+        <div class="card" onclick="goTo('frauds.html')"> 
+            <h3>Learn About Frauds</h3> 
+            <p>Understand different types of cyber scams like phishing, OTP fraud, and UPI scams.</p> 
+        </div> 
+        
+    <div class="card" onclick="goTo('awareness.html')"> 
+        <h3>Stay Aware</h3> 
+        <p>Get tips and test your knowledge to avoid falling into traps.</p> 
+    </div> 
+    
+    <div class="card" onclick="goTo('report.html')"> 
+        <h3>Report Fraud</h3> 
+        <p>Share your experience and help others stay safe.</p> 
+    </div> 
+    
+    <div class="card" onclick="goTo('videos.html')"> 
+        <h3>Watch Videos</h3> 
+        <p>Learn through real-life examples and expert guidance.</p> 
+    </div> 
+</div>
+
+<script>
+function goTo(page){
+    window.location.href = page;
+}
+</script>
+
+<footer>
+    <p>© 2026 CyberShield | Stay Safe Online</p>
+</footer>
+
+</body>
+</html>
+
+</body>
+<script>
+function goTo(page) {
+    window.location.href = page;
+}
+</script>
+</html>

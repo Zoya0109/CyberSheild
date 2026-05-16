@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CyberShield - Awareness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit() {
+
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            includedLanguages: 'hi,zh-CN,fr,es',
+            autoDisplay: false
+        },
+        'google_translate_element'
+    );
+}
+
+function changeLanguage(lang) {
+
+    if (lang === "en") {
+        document.cookie = "googtrans=/en/en;path=/";
+        location.reload();
+        return;
+    }
+
+    const interval = setInterval(() => {
+
+        const select = document.querySelector(".goog-te-combo");
+
+        if (select) {
+
+            select.value = lang;
+            select.dispatchEvent(new Event("change"));
+
+            clearInterval(interval);
+        }
+
+    }, 500);
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<header>
+    <h1>CyberShield</h1>
+    <p>Awareness Tips</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="frauds.html">Fraud Types</a>
+    <a href="awareness.html">Awareness Tips</a>
+    <a href="report.html">Report Fraud</a>
+    <a href="videos.html">Videos</a>
+
+    <select id="custom-language" onchange="changeLanguage(this.value)">
+    <option value="en">English</option>
+    <option value="hi">Hindi</option>
+    <option value="zh-CN">Chinese</option>
+    <option value="fr">French</option>
+    <option value="es">Spanish</option>
+</select>
+
+<div id="google_translate_element" style="display:none;"></div>
+</nav>
+
+<section>
+    <h2>Test Your Awareness</h2>
+
+    <div class="card">
+        <p>You receive a call asking for OTP to “verify your bank account”. What will you do?</p>
+        <button onclick="showAnswer()">Show Answer</button>
+        <p id="answer" style="display:none; color:red;">
+            Never share your OTP with anyone. Banks never ask for OTP. This is a fraud attempt.
+        </p>
+    </div>
+
+    <div class="card">
+        <p>You receive a message: "You won a lottery! Click this link." What will you do?</p>
+        <button onclick="showAnswer2()">Show Answer</button>
+        <p id="answer2" style="display:none; color:red;">
+            This is a scam. Do not click unknown links.
+    </p>
+    </div>
+
+    <div class="card">
+        <p>Someone sends you a QR code and asks you to scan it to receive money. Is it safe?</p>
+        <button onclick="showAnswer3()">Show Answer</button>
+        <p id="answer3" style="display:none; color:red;">
+            No. Scanning unknown QR codes can lead to unauthorized money deduction.
+    </div>
+
+    <div class="card">
+        <p>A stranger on social media is asking for personal photos and threatening you. What should you do?</p>
+        <button onclick="showAnswer4()">Show Answer</button>
+        <p id="answer4" style="display:none; color:red;">
+            Do not respond. Block the user and report to cyber crime portal immediately.
+    </div>
+
+    <div class="card">
+        <p>You receive a message offering a high-paying job with upfront registration fee. Is it real?</p>
+        <button onclick="showAnswer5()">Show Answer</button>
+        <p id="answer5" style="display:none; color:red;">
+            No. Genuine companies never ask for money to offer jobs.
+    </div>
+
+    <div class="card">
+        <p>You get an email saying “Your account will be blocked, click link immediately”. What should you do?</p>
+        <button onclick="showAnswer6()">Show Answer</button>
+        <p id="answer6" style="display:none; color:red;">
+            Do not click links. Verify directly from official website or app.
+    </div>
+
+    <div class="card">
+        <p>You find a phone number on Google claiming to be bank customer care. What risk is there?</p>
+        <button onclick="showAnswer7()">Show Answer</button>
+        <p id="answer7" style="display:none; color:red;">
+            Scammers often post fake numbers to steal personal data.
+    </div>
+
+</section>
+
+<script>
+function showAnswer() {
+    document.getElementById("answer").style.display = "block";
+}
+</script>
+
+<script>
+function showAnswer2() {
+    document.getElementById("answer2").style.display = "block";
+}
+</script>
+
+<script>
+function showAnswer3() {
+    document.getElementById("answer3").style.display = "block";
+}
+</script>
+
+<script>
+function showAnswer4() {
+    document.getElementById("answer4").style.display = "block";
+}
+</script>
+
+<script>
+function showAnswer5() {
+    document.getElementById("answer5").style.display = "block";
+}
+</script>
+
+<script>
+function showAnswer6() {
+    document.getElementById("answer6").style.display = "block";
+}
+</script>
+
+<script>
+function showAnswer7() {
+    document.getElementById("answer7").style.display = "block";
+}
+</script>
+
+</body>
+</html>

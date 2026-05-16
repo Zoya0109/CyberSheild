@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>CyberShield - Report Fraud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit() {
+
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            includedLanguages: 'hi,zh-CN,fr,es',
+            autoDisplay: false
+        },
+        'google_translate_element'
+    );
+}
+
+function changeLanguage(lang) {
+
+    if (lang === "en") {
+        document.cookie = "googtrans=/en/en;path=/";
+        location.reload();
+        return;
+    }
+
+    const interval = setInterval(() => {
+
+        const select = document.querySelector(".goog-te-combo");
+
+        if (select) {
+
+            select.value = lang;
+            select.dispatchEvent(new Event("change"));
+
+            clearInterval(interval);
+        }
+
+    }, 500);
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<header>
+    <h1>CyberShield</h1>
+    <p>Report a Fraud</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="frauds.html">Fraud Types</a>
+    <a href="awareness.html">Awareness Tips</a>
+    <a href="report.html">Report Fraud</a>
+    <a href="videos.html">Videos</a>
+
+<select id="custom-language" onchange="changeLanguage(this.value)">
+    <option value="en">English</option>
+    <option value="hi">Hindi</option>
+    <option value="zh-CN">Chinese</option>
+    <option value="fr">French</option>
+    <option value="es">Spanish</option>
+</select>
+
+<div id="google_translate_element" style="display:none;"></div></nav>
+
+<section>
+    <h2>Report Cyber Fraud</h2>
+
+    <p>
+    If you have experienced any cyber fraud, please report it here.
+    Your information can help spread awareness and prevent others from being victims.
+</p>
+
+    <form onsubmit="return submitForm()">
+
+        <input type="text" id="name" placeholder="Enter your name" required><br><br>
+
+        <input type="email" id="email" placeholder="Enter your email" required><br><br>
+
+        <select id="type" required>
+            <option value="">Select Fraud Type</option>
+            <option>🔐 Phishing</option>
+            <option>📱 OTP Fraud</option>
+            <option>💸 UPI Scam</option>
+            <option>⚠️ Job Scam</option>
+        </select><br><br>
+
+        <textarea id="message" placeholder="Describe the issue" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="success" style="color: green; display:none;">
+        Your report has been submitted successfully!
+    </p>
+
+</section>
+
+<script>
+function submitForm() {
+    document.getElementById("success").style.display = "block";
+    return false; // prevents page reload
+}
+</script>
+
+</body>
+</html>

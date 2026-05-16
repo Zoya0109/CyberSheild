@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CyberShield - Fraud Types</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+function googleTranslateElementInit() {
+
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            includedLanguages: 'hi,zh-CN,fr,es',
+            autoDisplay: false
+        },
+        'google_translate_element'
+    );
+}
+
+function changeLanguage(lang) {
+
+    if (lang === "en") {
+        document.cookie = "googtrans=/en/en;path=/";
+        location.reload();
+        return;
+    }
+
+    const interval = setInterval(() => {
+
+        const select = document.querySelector(".goog-te-combo");
+
+        if (select) {
+
+            select.value = lang;
+            select.dispatchEvent(new Event("change"));
+
+            clearInterval(interval);
+        }
+
+    }, 500);
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<header>
+    <h1>CyberShield</h1>
+    <p>Fraud Types</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="frauds.html">Fraud Types</a>
+    <a href="awareness.html">Awareness Tips</a>
+    <a href="report.html">Report Fraud</a>
+    <a href="videos.html">Videos</a>
+
+<select id="custom-language" onchange="changeLanguage(this.value)">
+    <option value="en">English</option>
+    <option value="hi">Hindi</option>
+    <option value="zh-CN">Chinese</option>
+    <option value="fr">French</option>
+    <option value="es">Spanish</option>
+</select>
+
+<div id="google_translate_element" style="display:none;"></div>
+
+</nav>
+
+<section>
+    <h2>Types of Cyber Fraud</h2>
+
+
+    <div class="card">
+    <h3>🔐 Phishing</h3>
+    <p>
+        Phishing is a type of cyber attack where attackers send fake emails or messages 
+        to trick users into sharing sensitive information like passwords or bank details.
+    </p>
+    <p><b>Prevention:</b> Always check the sender and avoid clicking unknown links.</p>
+</div>
+
+<div class="card">
+    <h3>📱 OTP Fraud</h3>
+    <p>
+        In OTP fraud, scammers call or message users pretending to be bank officials 
+        and ask for OTP to access their accounts.
+    </p>
+    <p><b>Prevention:</b> Never share your OTP with anyone.</p>
+</div>
+
+<div class="card">
+    <h3>💸 UPI Scam</h3>
+    <p>
+        Fraudsters send fake payment requests or links to trick users into transferring money.
+    </p>
+    <p><b>Prevention:</b> Always verify before approving any payment request.</p>
+</div>
+
+<div class="card">
+    <h3>⚠️ Job Scam</h3>
+    <p>
+        Fake job offers asking for registration fees or personal information.
+    </p>
+    <p><b>Prevention:</b> Never pay money for job applications.</p>
+</div>
+
+</section>
+
+</body>
+</html>
